@@ -1,0 +1,7 @@
+1;12/10/2020;10 am;2;confirmed;caries
+2;13/11/2020;6 pm;2;canceled;scaling
+3;13/11/2020;12 am;1;confirmed;braces
+4;15/11/2020;4 pm;3;confirmed;caries
+5;20/11/2020;2 pm;4;pending;scaling
+6;19/11/2020;8 am;5;pending;caries
+7;17/11/2020;4 pm;2;confirmed;braces
