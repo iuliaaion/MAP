@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<TabPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE"
+         xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="main.controller.Controller">
+  <tabs>
+    <Tab text="Patients">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane layoutX="1.0" prefHeight="368.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="patientTable" layoutX="14.0" layoutY="14.0" prefHeight="333.0" prefWidth="301.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Id">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="id" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="75.0" text="Name" >
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="name" />
+                                </cellValueFactory>
+                            </TableColumn>
+                              <TableColumn prefWidth="75.0" text="Age" >
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="age" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="75.0" text="Phone No" >
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="phoneNo" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="namePatientField" layoutX="419.0" layoutY="91.0" />
+                        <TextField fx:id="agePatientField" layoutX="419.0" layoutY="135.0" />
+                        <TextField fx:id="phonePatientField" layoutX="419.0" layoutY="184.0" />
+                        <Text fx:id="idPatientLabel" layoutX="421.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="162.2060546875" />
+                        <Label layoutX="346.0" layoutY="60.0" text="Id" />
+                        <Label layoutX="346.0" layoutY="96.0" text="Name" />
+                        <Label layoutX="346.0" layoutY="140.0" text="Age" />
+                        <Label layoutX="346.0" layoutY="189.0" text="Phone" />
+                        <Button layoutX="352.0" layoutY="253.0" mnemonicParsing="false" onAction="#addPatient" prefHeight="27.0" prefWidth="93.0" text="Add" />
+                        <Button layoutX="350.0" layoutY="289.0" mnemonicParsing="false" onAction="#clearPatient" prefHeight="27.0" prefWidth="207.0" text="Clear" />
+                        <Button layoutX="464.0" layoutY="253.0" mnemonicParsing="false" onAction="#deletePatient" prefHeight="27.0" prefWidth="93.0" text="Delete" />
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab text="Appointment">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Pane prefHeight="368.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="appointmentTable" layoutX="14.0" layoutY="14.0" prefHeight="200.0" prefWidth="452.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="Id" >
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="id" />
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn prefWidth="75.0" text="Date" >
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="date" />
+                                </cellValueFactory>
+                            </TableColumn>
+                              <TableColumn prefWidth="75.0" text="Hour" >
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="hour" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="75.0" text="Patient" >
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="patientId" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="75.0" text="Status" >
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="status" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                              <TableColumn prefWidth="75.0" text="Problem">
+                                  <cellValueFactory>
+                                      <PropertyValueFactory property="problem" />
+                                  </cellValueFactory>
+                              </TableColumn>
+                          </columns>
+                        </TableView>
+                        <TextField fx:id="dateAppointmentField" layoutX="117.0" layoutY="268.0" />
+                        <TextField fx:id="hourAppointmentField" layoutX="117.0" layoutY="305.0" />
+                        <TextField fx:id="patientAppointmentField" layoutX="401.0" layoutY="232.0" />
+                        <TextField fx:id="statusAppointmentField" layoutX="401.0" layoutY="268.0" />
+                        <TextField fx:id="problemAppointmentField" layoutX="401.0" layoutY="305.0" />
+                        <Text fx:id="idAppointmentLabel" layoutX="117.0" layoutY="250.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="165.2060546875" />
+                        <Label layoutX="56.0" layoutY="237.0" text="Id" />
+                        <Label layoutX="56.0" layoutY="273.0" text="Date" />
+                        <Label layoutX="56.0" layoutY="310.0" text="Hour" />
+                        <Label layoutX="344.0" layoutY="237.0" text="Patient" />
+                        <Label layoutX="344.0" layoutY="273.0" text="Status" />
+                        <Label layoutX="344.0" layoutY="310.0" text="Problem" />
+                        <Button layoutX="498.0" layoutY="70.0" mnemonicParsing="false" onAction="#addAppointment" prefHeight="27.0" prefWidth="60.0" text="Add" />
+                        <Button layoutX="498.0" layoutY="108.0" mnemonicParsing="false" onAction="#deleteAppointment" prefHeight="27.0" prefWidth="60.0" text="Delete" />
+                        <Button layoutX="498.0" layoutY="146.0" mnemonicParsing="false" onAction="#clearAppointment" prefHeight="27.0" prefWidth="60.0" text="Clear" />
+                     </children>
+                  </Pane>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
